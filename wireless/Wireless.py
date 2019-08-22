@@ -159,7 +159,7 @@ class NmcliWireless(WirelessDriver):
         self._clean(self.current())
 
         # attempt to connect
-        response = cmd('nmcli dev wifi connect {} password {} iface {}'.format(
+        response = cmd('nmcli dev wifi connect {} password {} ifname {}'.format(
             ssid, password, self._interface))
 
         # parse response
@@ -256,7 +256,7 @@ class Nmcli0990Wireless(WirelessDriver):
         self._clean(self.current())
 
         # attempt to connect
-        response = cmd('nmcli dev wifi connect {} password {} iface {}'.format(
+        response = cmd('nmcli dev wifi connect {} password {} ifname {}'.format(
             ssid, password, self._interface))
 
         # parse response
